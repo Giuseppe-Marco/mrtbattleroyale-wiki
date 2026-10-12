@@ -1,0 +1,12 @@
+/* Wider content and slightly tighter tables for the long reference pages. */
+.md-grid {
+  max-width: 1340px;
+}
+
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+}
+
+.md-typeset table:not([class]) td code {
+  white-space: nowrap;
+}
