@@ -101,3 +101,4 @@ nav:
       - Admin tools: reference/admin-tools.md
       - Developer API: reference/api.md
   - FAQ: faq.md
+  - Changelog: changelog.md

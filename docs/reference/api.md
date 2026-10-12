@@ -6,7 +6,7 @@ Other plugins (bots, scoreboards, rewards, anti-cheat exemptions...) can read th
 
 The API ships inside the plugin jar; there is no separate artifact.
 
-1. Add `MRTBattleRoyale-2.0.2.jar` to your project as a **compile-only** dependency (it must not be shaded into your plugin).
+1. Add `MRTBattleRoyale-2.1.0.jar` to your project as a **compile-only** dependency (it must not be shaded into your plugin).
 
     === "Maven"
 
@@ -14,9 +14,9 @@ The API ships inside the plugin jar; there is no separate artifact.
         <dependency>
             <groupId>it.mrt</groupId>
             <artifactId>MRTBattleRoyale</artifactId>
-            <version>2.0.2</version>
+            <version>2.1.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/MRTBattleRoyale-2.0.2.jar</systemPath>
+            <systemPath>${project.basedir}/libs/MRTBattleRoyale-2.1.0.jar</systemPath>
         </dependency>
         ```
 
@@ -24,7 +24,7 @@ The API ships inside the plugin jar; there is no separate artifact.
 
         ```groovy
         dependencies {
-            compileOnly files('libs/MRTBattleRoyale-2.0.2.jar')
+            compileOnly files('libs/MRTBattleRoyale-2.1.0.jar')
         }
         ```
 
