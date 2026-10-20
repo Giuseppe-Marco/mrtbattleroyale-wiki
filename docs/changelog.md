@@ -56,6 +56,7 @@ The biggest update so far. Configs and arenas are upgraded automatically: replac
 ### 🧰 Admin tools
 - `/br admin` match tools: `info`, `spectate`, `revive`, `eliminate`, `end`, `zone pause|resume`, `skipzone`, `deathmatch`, `airdrop`, `refill`, `gulag open|close|auto`, `countdown`, `team`.
 - `/br resetstats <stats|all>`: reset everyone's statistics with a confirmation code and an **automatic backup** (refused during a match). Permission `br.admin.resetstats` (op only, not in `br.admin`).
+- `/br forcejoin` within `game.force-join-seconds` (default 60) of the start puts the player into the running match as a **player** (own team in Solo, a free place in Duo/Squad, deployed normally); later as a spectator.
 - `/br debug report`: a report file for support (passwords hidden).
 - Update checker (Modrinth).
 - `messages.command-label`: texts show `/br`, or `/battleroyale` when another plugin owns `/br`.
