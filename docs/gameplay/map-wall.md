@@ -30,6 +30,19 @@ Every frame needs a **solid block behind it** and **free space in front**: if so
 | `/br setup mapwall render` | Right click | Redraws the map (after you changed the map) |
 | `/br setup mapwall remove` | ++shift++ + click | Removes the wall and its picture |
 
+## Place names
+
+Like the named banners on vanilla maps, you can write the names of the places on the wall (Desert, Jungle, Old Town...). Go to the place **in the arena's map** and run:
+
+| Command | What it does |
+|---|---|
+| `/br setup mapwall label add <name>` | Adds a name where you stand. MiniMessage colours work: `<gold>Old Town` |
+| `/br setup mapwall label remove [name]` | Removes that name, or the one closest to you |
+| `/br setup mapwall label list` | Lists the names with their coordinates |
+| `/br setup mapwall label clear` | Removes every name |
+
+The names are drawn by Minecraft itself as map markers (a white banner with the text under it), so they stay sharp. Every player sees them, together with their own pin. They are saved with the wall and kept when you rebuild it.
+
 !!! tip "Good to know"
     - The wall is saved immediately (no need for `/br setup save`) in `mapwalls.yml`, and the picture in `mapwalls/<arena>.png`: it is drawn **once**, not at every restart.
     - Drawing loads the map a few chunks at a time and never generates new terrain, so it doesn't freeze the server. Speed: `setup.chest-scan.chunks-at-once` in `config.yml`.
