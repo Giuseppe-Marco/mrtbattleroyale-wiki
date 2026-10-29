@@ -1,6 +1,12 @@
 # Changelog
 
-Full version history: [Modrinth versions](https://modrinth.com/plugin/mrtbattleroyale/versions).
+Full version history: [Modrinth versions](https://modrinth.com/plugin/battleroyalepremium/versions).
+
+## 2.1.2 — Update checker fix
+
+- Fixed: the update checker looked for the wrong Modrinth project, so servers were never told about new versions (and the console said the project was not found). It now checks this project: from this version on you are notified of every update.
+
+---
 
 ## 2.1.1 — Spawn picker, chest finder & admin tools
 

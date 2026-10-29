@@ -45,7 +45,7 @@ theme:
 extra:
   social:
     - icon: simple/modrinth
-      link: https://modrinth.com/plugin/mrtbattleroyale
+      link: https://modrinth.com/plugin/battleroyalepremium
       name: MRTBattleRoyale on Modrinth
 
 extra_css:

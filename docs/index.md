@@ -2,7 +2,7 @@
 
 **A complete Battle Royale minigame for Paper servers**: solo, duo and squad matches with a shrinking zone, skydive deploy, loot chests and airdrops, a gulag for a second chance, knockdowns, events with their own leaderboard, and a setup that is done almost entirely from in-game menus.
 
-[Get it on Modrinth](https://modrinth.com/plugin/mrtbattleroyale){ .md-button .md-button--primary }
+[Get it on Modrinth](https://modrinth.com/plugin/battleroyalepremium){ .md-button .md-button--primary }
 [Install it](getting-started/installation.md){ .md-button }
 
 ---
