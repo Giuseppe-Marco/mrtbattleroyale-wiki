@@ -24,6 +24,7 @@ All need **`br.admin.match`** and, except `spectate`, also work from the console
 | `/br admin eliminate <player> [nostats]` | Takes an alive, knocked-down or gulag player out of the match at once: no gulag, no kill credit. Also works on a player who disconnected and is still in the rejoin window. With `nostats` the match is not written to their statistics (no game, no loss). |
 | `/br admin end <player\|team number> [arena]` | Declares the winner. A player name picks that player's team (any mode); a number picks a team (DUO/SQUAD, 1-based, as in the team selector). Everyone else still in contention is eliminated without kill credit, then the match ends normally: rewards, stats, winner commands, fireworks. In SOLO use a name, not a number. |
 | `/br admin team <player> <number>` | Moves a **queued** player to team `number` (DUO/SQUAD, before the start). Stored as their team choice, so the team assignment honours it. Refused if the team is full or the number is invalid. |
+| `/br admin broadcast <arena\|all> <message>` | A staff message (`[Staff] ...`, with a sound) to every player of one match — lobby, players and spectators — or of **all** matches. MiniMessage colours work. Alias: `bc`. Format: `admin.broadcast-format` in the language file. |
 
 ### Zone
 

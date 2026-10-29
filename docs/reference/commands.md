@@ -166,6 +166,7 @@ All need **`br.admin.match`**. Details and examples in [Admin tools](admin-tools
 | `/br admin gulag <open\|close\|auto> [arena]` | Forces the gulag open / closed, or back to automatic. |
 | `/br admin countdown <seconds> [arena]` | Sets (or starts) the start countdown (1-3600 s). |
 | `/br admin team <player> <number>` | Moves a queued player to a team (DUO/SQUAD). |
+| `/br admin broadcast <arena\|all> <message>` | Staff message to the players of one match or of all matches. |
 
 ### Economy
 
