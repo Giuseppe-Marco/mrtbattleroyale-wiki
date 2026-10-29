@@ -42,6 +42,7 @@ The biggest update so far. Configs and arenas are upgraded automatically: replac
 - A **"BUILDING ON"** title while gliding, on maps with building enabled.
 
 ### 🛠️ Setup
+- **Spawn picker map wall** (SKYDIVE arenas): `/br setup mapwall` builds a wall of maps in the waiting lobby showing the arena from above; players click a point to choose where they drop and are launched above it. Each player sees their own pin, party leaders choose for their party, the choice locks 5 s before the start, no choice = the usual launch points. Not used in events.
 - `/br setup` opens the **list of arenas** (click to edit, right click to teleport).
 - **Find chests automatically:** `/br setup scanchests [radius]` (GUI: Loot → Find chests) registers every chest, trapped chest and barrel already built in the map as a loot chest — ideal for downloaded maps full of chests. `/br setup clearchests` removes them all.
 - **Step-by-step chat guide** (`/br setup guide`).

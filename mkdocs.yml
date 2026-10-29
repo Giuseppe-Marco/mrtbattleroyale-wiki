@@ -88,6 +88,7 @@ nav:
       - Gulag: gameplay/gulag.md
       - Teams, knockdown & colours: gameplay/teams.md
       - Spectators: gameplay/spectators.md
+      - Spawn picker (map wall): gameplay/map-wall.md
   - Events: events.md
   - Server features:
       - Hub, NPCs & signs: features/hub.md

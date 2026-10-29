@@ -104,6 +104,8 @@ All need **`br.admin.setup`**, must be run by a player, and cannot be used while
 | `/br setup removechest` | Removes the chest points near you. |
 | `/br setup scanchests [radius]` | Finds every chest, trapped chest and barrel of the map (within the zone radius, or the given radius) and adds them as loot chests. |
 | `/br setup clearchests [confirm]` | Removes every chest point of the arena (asks for `confirm`). |
+| `/br setup mapwall [width height]` | SKYDIVE arenas: builds the spawn-picker map wall on the wall you look at (default 7×7) and draws the map. See [Spawn picker](../gameplay/map-wall.md). |
+| `/br setup mapwall render\|remove` | Redraws the map of the wall / removes the wall. |
 | `/br setup airdrop` | Adds an airdrop landing point. |
 | `/br setup removeairdrop` | Removes nearby airdrop points. |
 | `/br setup geyser` | Adds a geyser. |
