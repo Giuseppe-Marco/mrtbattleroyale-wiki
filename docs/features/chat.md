@@ -90,8 +90,8 @@ chat:
   # Event lobby
   event-format: '<gold>[EVENT] <#ffffff>%player% <#333333>» <gray>%message%'
 
-  # Inside a match: <hex> becomes the team color
-  game-format: '<hex><player> <dark_gray>»</dark_gray> <white><message>'
+  # Inside a match: <marker> = SOLO marker, <hex> = the player's colour
+  game-format: '<marker><hex><player> <dark_gray>»</dark_gray> <white><message>'
   default-name-color: '#ffffff'
   spectator-prefix: '<gray>[SPECTATOR] '
   team-prefix: '<green>[TEAM] '
@@ -106,7 +106,7 @@ chat:
 | Key | What it does |
 |---|---|
 | `format` / `event-format` | Use `%player%`, `%message%`, `%world%` and any PlaceholderAPI placeholder (for example `%vault_prefix%`). Colors: legacy `&a` / `§a`, hex `<#rrggbb>` and MiniMessage like `<gradient:...>`. |
-| `game-format` | Use `<player>`, `<message>` and `<hex>`, the player's team color. `default-name-color` is used in SOLO or before teams are assigned. |
+| `game-format` | Use `<player>`, `<message>`, `<hex>` and `<marker>`. `<hex>` is the player's colour: their **own** hex colour in SOLO (the same as their marker in the tab list), the **team** colour in DUO/SQUAD. `<marker>` is the coloured SOLO marker (`team.visuals.solo-marker` in `game.yml`, default `●`) and is empty in DUO/SQUAD. `default-name-color` is used before the teams are assigned (waiting lobby). See [Teams, knockdown & colours](../gameplay/teams.md). |
 | `smallcaps` | Small caps for the fixed text of the format (prefixes, arrows). Player names and messages are never converted. Off by default because it makes conversations harder to read. |
 | `allow-player-colors` | Lets players use colors and decorations (MiniMessage or `&` codes) in their own messages. Click, hover and similar tags are never allowed. |
 
@@ -165,7 +165,7 @@ commands:
 
     An entry also matches its namespaced forms (`msg` allows `/essentials:msg`).
 
-- Private message commands (`/msg`, `/tell`, `/me`...) are blocked like any other command unless you allow them.
+- Other plugins' private message commands (`/msg`, `/tell`, `/me`...) are blocked like any other command unless you allow them.
 - Players with `br.admin.bypass` (part of `br.admin`) are never blocked.
 
 Blocked players see the `general.command-blocked` message.

@@ -64,6 +64,7 @@ The first edit copies the global phases into the arena as a starting point. More
 | Add spawn / Clear spawns | Add a spawn at your position / remove them all (SPAWNS mode) |
 | Launch points (skydive) | Left click adds a point here (up to 16), right click removes the ones within 15 blocks, ++shift++ + click removes them all |
 | Launch settings | `deploy.skydive-default-height`, `deploy.skydive-max-seconds`, `deploy.remove-elytra-on-land` (SKYDIVE only) |
+| Launch settings → Map wall | SKYDIVE only: left click builds the spawn-picker map wall on the wall you look at (7×7), right click redraws the map, ++shift++ + click removes it. See [Spawn picker (map wall)](../gameplay/map-wall.md) |
 
 ### Loot & Features
 
@@ -71,6 +72,8 @@ The first edit copies the global phases into the arena as a starting point. More
 |---|---|
 | Add chest | Adds the chest you are looking at |
 | Remove nearby chests | Removes the chest points within 3 blocks of you |
+| Find chests automatically | Scans the map within the zone radius and adds every chest, trapped chest and barrel as a loot chest (same as `/br setup scanchests`) |
+| Remove all chests | ++shift++ + click removes every chest point of the arena (same as `/br setup clearchests confirm`) |
 | Airdrops | Opens the airdrop window |
 | Geysers | Opens the geyser window |
 | Loot settings | Opens the loot settings window |
@@ -108,6 +111,7 @@ The first edit copies the global phases into the arena as a starting point. More
 | Deathmatch duration | `game.deathmatch-timeout-seconds` (0 = no limit) |
 | Final collapse | `game.deathmatch-collapse-seconds` |
 | Rejoin time | `game.rejoin-grace-seconds` |
+| Late force-join | `game.force-join-seconds`: for how long after the deploy `/br forcejoin` still lets a player **play** (0 = spectator only). See [Commands](../reference/commands.md#match-and-server-management) |
 | Time of day | `game.world-time` |
 | Building | `game.allow-building` |
 | Drop loot on death | `game.drop-loot-on-death` |

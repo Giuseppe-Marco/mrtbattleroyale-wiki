@@ -55,6 +55,7 @@ See [Loot, chests & airdrops](../gameplay/loot.md) and [Gulag](../gameplay/gulag
 |---|---|
 | `/br admin countdown <seconds> [arena]` | Sets the countdown of a starting match, or starts the countdown with that value from the lobby when there are enough players. Range 1-3600. |
 | `/br start [arena]` / `/br stop [arena]` | Start now / stop without results (`br.admin.game`). |
+| `/br forcejoin <player> [arena]` | Puts a player into an arena (`br.admin.game`). In the lobby they join normally. Within `game.force-join-seconds` (default 60) from the deploy of a running match they join and **play**: their own team in SOLO, a team with a free place in DUO/SQUAD (or a new team), deployed like everybody. Later they join as a spectator. The window is also in the setup GUI (**Match rules → Late force-join**). |
 
 Most tools only work on a **live** match: they reply with a clear message otherwise (not running, not a participant, already alive, in a duel...).
 

@@ -48,6 +48,7 @@ Players can group up before joining:
 - When the **leader joins** a match, the online members are pulled into the same match. If the party is bigger than the team size of that mode, the leader is warned that some members will end up on other teams.
 - If the leader leaves the **queue**, the party leaves with them (never during a running match).
 - The party can't be changed during a running match.
+- In a SKYDIVE arena with a [spawn-picker map wall](map-wall.md), the **leader** chooses the drop point for the whole party.
 
 ```yaml
 party:
@@ -74,7 +75,7 @@ team:
 
 ### DUO / SQUAD
 
-Every team gets one of the game's base colours (*Team 1*, *Team 2*...). Minecraft has only **16 base colours** for names and glow; teams use 15 of them (black is left out), so with more teams the colours repeat. The colour is used for the name in the tab list, above the head and in chat.
+Every team gets one of the game's base colours (*Team 1*, *Team 2*...). Minecraft has only **16 base colours** for names and glow; teams use 15 of them (black is left out), so with more teams the colours repeat. The colour is used for the name in the tab list, above the head and in chat. There is no marker in DUO/SQUAD (`<marker>` and `%brbattle_solo_marker%` are empty).
 
 ### SOLO
 
@@ -82,7 +83,7 @@ In SOLO every player gets a **hex colour of their own**, all different, however 
 
 - `solo-marker`: a marker in that colour **before the name** (tab list and name tags). `<color>` is the player's hex colour; `''` = no marker. Since names and glow can only use the 16 base colours, the marker is what makes everyone unique.
 - `hex-tab-names: true`: the name in the **tab list** is written in the player's own hex colour, after the marker. The name above the head still uses the closest base colour.
-- The name in chat uses the hex colour.
+- In the match chat the name is written in the player's own hex colour, with the same marker before it (`<marker><hex>` in `chat.game-format`, see [Chat](../features/chat.md)).
 
 !!! tip "Using the TAB plugin?"
     TAB must not manage name tags or tab list names of players in a match, or it overrides these colours. Set `hex-tab-names: false` to leave the tab list to TAB and use the `%brbattle_name_color_hex%` / `%brbattle_solo_marker%` placeholders. See [Placeholders](../reference/placeholders.md) and the [FAQ](../faq.md).

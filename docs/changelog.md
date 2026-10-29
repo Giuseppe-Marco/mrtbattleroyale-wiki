@@ -2,6 +2,35 @@
 
 Full version history: [Modrinth versions](https://modrinth.com/plugin/mrtbattleroyale/versions).
 
+## 2.1.1 — Spawn picker, chest finder & admin tools
+
+Replace the jar and **restart** the server (no hot reload): configs are upgraded automatically. 📖 Everything is in the **[wiki](index.md)**.
+
+### 🗺️ New: spawn picker map wall (SKYDIVE arenas)
+- `/br setup mapwall [width height]` builds a wall of maps (default 7×7) in the waiting lobby and **draws the arena from above** with the real block colours and height shading, like vanilla maps. The picture is drawn once (without freezing the server) and saved.
+- Players **click a point of the wall** to choose where they drop: when the match starts they are launched in the air above it.
+- Every player sees **their own pin**; in a **party the leader chooses** and the party lands together; the choice **locks 5 seconds before the start**; no choice = the arena's launch points as before. Never used in events.
+- **Place names** like named banners on vanilla maps: `/br setup mapwall label add <name>` where you stand (`remove`, `list`, `clear`).
+- `/br setup mapwall render` redraws the map, `remove` takes the wall down. GUI: Spawns → Launch settings → Map wall. Settings: `map-wall.lock-seconds`, `map-wall.click-distance` in game.yml.
+
+### 📦 New: find chests automatically
+- `/br setup scanchests [radius]` (GUI: Loot → Find chests automatically) finds every **chest, trapped chest and barrel** already built in the map within the zone and registers them as loot chests — perfect for downloaded maps full of chests. Already registered chests and airdrop points are left alone; progress in the action bar; never generates new terrain.
+- `/br setup clearchests confirm` (GUI: Remove all chests) removes every chest point. Settings: `setup.chest-scan.types` / `chunks-at-once` in config.yml.
+
+### 🧰 Admin
+- `/br forcejoin` into a match that **started less than 60 seconds ago** now lets the player **play** (own team in Solo, a free place in Duo/Squad, deployed like everybody); later they join as a spectator. `game.force-join-seconds` (GUI: Match rules → Late force-join), 0 = always spectator.
+- `/br admin broadcast <arena|all> <message>` (alias `bc`): a `[Staff]` message with a sound to everyone in one match or in all matches. MiniMessage colours allowed.
+
+### ✨ Improvements
+- **Match chat:** in Solo the name now has the player's exact hex colour and the coloured marker before it, the same as the tab list (`<marker>` in `chat.game-format`).
+- **Tab completion** for the new commands and their arguments (`mapwall`, `label`, `scanchests`, `clearchests`, `resetstats`, `event undo`, `admin broadcast`).
+
+### 🐞 Fixes
+- `%brbattle_name_hex%`, `%brbattle_name_color_hex%` and `%brbattle_solo_marker%` showed the raw placeholder outside a match; now they are empty.
+- Saving an incomplete arena said "cannot save" although it was saved: now "Saved, but not playable yet".
+
+---
+
 ## 2.1.0 — Events, spectators & much more
 
 The biggest update so far. Configs and arenas are upgraded automatically: replace the jar and **restart** the server (no hot reload). 📖 New **[wiki](index.md)** with every feature, command, permission and placeholder.
@@ -42,9 +71,7 @@ The biggest update so far. Configs and arenas are upgraded automatically: replac
 - A **"BUILDING ON"** title while gliding, on maps with building enabled.
 
 ### 🛠️ Setup
-- **Spawn picker map wall** (SKYDIVE arenas): `/br setup mapwall` builds a wall of maps in the waiting lobby showing the arena from above; players click a point to choose where they drop and are launched above it. Place names can be added (`/br setup mapwall label add <name>`), shown like named banners. Each player sees their own pin, party leaders choose for their party, the choice locks 5 s before the start, no choice = the usual launch points. Not used in events.
 - `/br setup` opens the **list of arenas** (click to edit, right click to teleport).
-- **Find chests automatically:** `/br setup scanchests [radius]` (GUI: Loot → Find chests) registers every chest, trapped chest and barrel already built in the map as a loot chest — ideal for downloaded maps full of chests. `/br setup clearchests` removes them all.
 - **Step-by-step chat guide** (`/br setup guide`).
 - **Markers in the map** while editing (chests, airdrops, geysers, spawns, launch points, gulag spots).
 - **Several skydive launch points** per arena, players split between them, teams together.
@@ -57,9 +84,7 @@ The biggest update so far. Configs and arenas are upgraded automatically: replac
 
 ### 🧰 Admin tools
 - `/br admin` match tools: `info`, `spectate`, `revive`, `eliminate`, `end`, `zone pause|resume`, `skipzone`, `deathmatch`, `airdrop`, `refill`, `gulag open|close|auto`, `countdown`, `team`.
-- `/br admin broadcast <arena|all> <message>`: a staff message to everyone in one match or in all matches.
 - `/br resetstats <stats|all>`: reset everyone's statistics with a confirmation code and an **automatic backup** (refused during a match). Permission `br.admin.resetstats` (op only, not in `br.admin`).
-- `/br forcejoin` within `game.force-join-seconds` (default 60) of the start puts the player into the running match as a **player** (own team in Solo, a free place in Duo/Squad, deployed normally); later as a spectator.
 - `/br debug report`: a report file for support (passwords hidden).
 - Update checker (Modrinth).
 - `messages.command-label`: texts show `/br`, or `/battleroyale` when another plugin owns `/br`.

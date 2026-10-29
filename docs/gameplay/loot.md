@@ -86,6 +86,8 @@ Apply changes with `/br reload`.
 
 Register chest points while editing the arena: look at a chest and use **Loot & Features → Add chest** or `/br setup chest`. **Remove nearby chests** (or `/br setup removechest`) deletes the points within 3 blocks of you.
 
+A map that is already full of chests doesn't need clicking one by one: **Loot & Features → Find chests automatically** (or `/br setup scanchests [radius]`) registers every chest, trapped chest and barrel within the zone radius (types and speed: `setup.chest-scan` in `config.yml`). **Remove all chests** (++shift++ + click, or `/br setup clearchests confirm`) removes every chest point. See [Your first arena](../getting-started/first-arena.md#placing-chests).
+
 !!! warning "Register points on the chests themselves"
     Points that are **not** picked in a match become **air**, whatever block is there (in the match copy only, the original map is never touched). So register chest points on real chests, not on the floor. If a chosen point has no container, a chest is placed there.
 

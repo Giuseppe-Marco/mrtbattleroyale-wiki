@@ -28,7 +28,7 @@ None of these are required. Install them only if you want what they add.
 ## Installing
 
 1. Stop the server.
-2. Put `MRTBattleRoyale-2.1.0.jar` in the `plugins/` folder.
+2. Put `MRTBattleRoyale-2.1.1.jar` in the `plugins/` folder.
 3. Start the server. The plugin creates its folder `plugins/MRTBattleRoyale/` with all the default files.
 4. Pick your language in `config.yml` (see [Language](#language) below).
 5. Stand where your hub should be and run `/br setlobby`.

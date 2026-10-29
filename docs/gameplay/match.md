@@ -20,7 +20,7 @@ Players join with `/br join`, the arena menu (`/br menu` or the hub compass), a 
 - In the waiting lobby players get a **Cosmetics** item, a **stats** book and a red **Leave** bed. In DUO/SQUAD they also get the **Choose Team** banner (see [Teams](teams.md)).
 - A party leader brings the whole party into the same match.
 - The action bar shows `Waiting for players... 3/4` until `min-players` is reached.
-- Joining a match that has **already started** makes you a spectator.
+- Joining a match that has **already started** makes you a spectator. Only an admin can still put a player into the match as a **player**, with `/br forcejoin <player> [arena]` within `game.force-join-seconds` (default 60) from the deploy: their own team in SOLO, a team with a free place in DUO/SQUAD. See [Commands](../reference/commands.md#match-and-server-management).
 
 The maximum number of players is the arena's own `max` (or `game.max-players`). In `SPAWNS` mode it is also capped by the number of spawns: every player needs one.
 
@@ -59,6 +59,8 @@ The arena's **deploy mode** decides how players arrive on the map. Change it in 
     - No fall damage while gliding and for a moment after landing.
     - Gliding players can't hit anyone.
     - The glide ends when you touch the ground, water or a ladder/vine, or after `skydive-max-seconds`. The locked elytra is then removed and any chestplate you wore before is given back.
+
+    - **Map wall**: if the arena has a [spawn picker](map-wall.md), players (in a party, the leader) click the wall in the waiting lobby to choose their drop point and are launched above it. Who doesn't choose uses the launch points. Never in events.
 
     Add launch points in **Spawns & Launch → Launch points (skydive)** (fly high above the map and left click) or with `/br setup skydive`.
 

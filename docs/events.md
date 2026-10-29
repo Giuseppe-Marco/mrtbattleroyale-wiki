@@ -25,7 +25,7 @@ Events live in `plugins/MRTBattleRoyale/events.yml`. You can edit everything in 
 2. **Start.** When the registration time ends:
     - if at least `players.min` registered players are online, the event starts;
     - otherwise it is cancelled and entry fees are refunded.
-3. **Matches.** Matches are played one after the other, only with the registered players, on the current map. While the event runs, its arenas are **reserved**: nobody else can join them, and they are hidden from the arena menu. Eliminated players watch the rest of the match with the spectator camera, and everyone leaves together when it ends.
+3. **Matches.** Matches are played one after the other, only with the registered players, on the current map. While the event runs, its arenas are **reserved**: nobody else can join them, and they are hidden from the arena menu. Eliminated players watch the rest of the match with the spectator camera, and everyone leaves together when it ends. Event matches always use the arena's own spawns or launch points: the [spawn-picker map wall](gameplay/map-wall.md) is never used in events.
 4. **Break between matches.** Players are back in the event lobby. They see their result (placement, kills, points earned), the top 5 of the standings and the time left. A boss bar counts down to the next match and shows its map.
 5. **Map change.** Depending on the [map choice](#map-choice-rotation-or-random-draw), the map rotates on a timer or is drawn before every match. A running match is never cut short.
 6. **End.** After `duration-minutes`, the match in progress ends normally. Then the final standings are announced, the podium is broadcast and the prizes are handed out. The standings are saved to `events/history/<id>-<date>.yml`.
@@ -242,7 +242,7 @@ Players get their own simple menu with `/br event` (or the **event** button in t
 
 ## Commands
 
-All commands are sub-commands of `/br` (alias `/battleroyale`). Admin commands need `br.admin.event` and also work from the console. See also [Commands](reference/commands.md).
+All commands are sub-commands of `/br` (alias `/battleroyale`). Admin commands need `br.admin.event` and also work from the console, except `edit` and `setlobby`. See also [Commands](reference/commands.md).
 
 | Command | Who | What it does |
 |---|---|---|

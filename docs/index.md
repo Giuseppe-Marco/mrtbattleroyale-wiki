@@ -66,7 +66,7 @@
 | | |
 |---|---|
 | **Modes** | Solo, Duo and Squad, with parties that queue together |
-| **Deploy** | Fixed spawns, or a skydive with one or more launch points |
+| **Deploy** | Fixed spawns, or a skydive with one or more launch points and an optional map wall to choose the drop point |
 | **Zone** | Configurable phases, damage, a moving zone and a particle wall |
 | **Loot** | Loot tables, per-player or full chest spawning, refills, a sound near full chests, airdrops |
 | **Gulag** | 1v1 duels to get back in, parallel arenas, kits, an anti-AFK rule |

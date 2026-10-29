@@ -8,7 +8,7 @@ With [PlaceholderAPI](https://modrinth.com/plugin/placeholderapi) installed, the
 
 **How values behave**
 
-- Match placeholders are **relative to the player**: they read the match the player is in. Outside a match they return `NONE` or `0`, never an empty string (empty values break TAB conditions and number formats).
+- Match placeholders are **relative to the player**: they read the match the player is in. Outside a match they return `NONE` or `0` (empty values break TAB conditions and number formats). The only exceptions are the colour placeholders meant to be pasted in front of a name (`name_color`, `name_hex`, `name_color_hex`, `solo_marker`): they are empty outside a match, so the name keeps its normal look.
 - Translated texts (state names, zone text, gulag status, Yes/No) come from the language file chosen with `language` in `config.yml`. The examples below use English.
 - Yes/No values come from `placeholder.bool-true` / `placeholder.bool-false` in the messages file (`Yes` / `No` in English).
 - Values are case-insensitive: `%brbattle_WINS%` works too.
@@ -77,9 +77,9 @@ See [Gulag](../gameplay/gulag.md).
 | `%brbattle_team_name%` | Team name | `Team 1`, `NONE` |
 | `%brbattle_team_color%` | Colour name of the team (in SOLO: the player's colour) | `aqua`, `red`, `NONE` |
 | `%brbattle_name_color%` | Legacy colour code ready for TAB prefixes: team colour in DUO/SQUAD, the player's colour in SOLO. Empty outside a match | `&b`, `&c` |
-| `%brbattle_name_hex%` | Hex colour of the name: the player's own unique colour in SOLO, the team colour in DUO/SQUAD | `#ff5555` |
-| `%brbattle_name_color_hex%` | Same as `name_hex`, ready for TAB (`&#rrggbb`) | `&#ff5555` |
-| `%brbattle_solo_marker%` | The coloured SOLO marker (`team.visuals.solo-marker` in `game.yml`) in `&#rrggbb` form for TAB. Empty in DUO/SQUAD | `&#ff5555● ` |
+| `%brbattle_name_hex%` | Hex colour of the name: the player's own unique colour in SOLO, the team colour in DUO/SQUAD. Empty outside a match | `#ff5555` |
+| `%brbattle_name_color_hex%` | Same as `name_hex`, ready for TAB (`&#rrggbb`). Empty outside a match | `&#ff5555` |
+| `%brbattle_solo_marker%` | The coloured SOLO marker (`team.visuals.solo-marker` in `game.yml`) in `&#rrggbb` form for TAB. Empty in DUO/SQUAD and outside a match | `&#ff5555● ` |
 
 See [Teams, knockdown & colours](../gameplay/teams.md).
 

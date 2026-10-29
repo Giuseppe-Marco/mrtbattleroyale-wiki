@@ -59,6 +59,7 @@ debug: false
 | `stats` | Statistics on/off and the database (SQLite or MySQL). |
 | `party` | Invite expiry and cooldown. |
 | `update-checker`, `metrics` | Modrinth update check and anonymous bStats statistics. |
+| `setup` | `chest-scan`: the containers `/br setup scanchests` registers as loot chests (`types`, default `CHEST`, `TRAPPED_CHEST`, `BARREL`) and how many chunks it loads at once (`chunks-at-once`, default 16; also used to draw the [map wall](../gameplay/map-wall.md)). See [Your first arena](first-arena.md). |
 | `setup-guide` | Offer the setup guide to admins when no arena exists. |
 
 ```yaml
@@ -78,6 +79,13 @@ messages:
 ```
 
 Admins with `br.admin.bypass` are never blocked, and `/br` itself can never be blocked.
+
+```yaml
+setup:
+  chest-scan:
+    types: [CHEST, TRAPPED_CHEST, BARREL]
+    chunks-at-once: 16
+```
 
 ---
 
@@ -107,6 +115,7 @@ game:
   world-time: 6000
   block-teleport-items: false
   rejoin-grace-seconds: 60
+  force-join-seconds: 60
   quick-join: true
   end-summary: true
 ```
@@ -115,7 +124,9 @@ game:
 - `deathmatch-timeout-seconds`: after the last zone phase, how long the final showdown lasts before the zone collapses completely (0 = no limit).
 - `allow-building` with `placed-blocks` (not shown): placed blocks and cobwebs disappear after a while.
 - `rejoin-grace-seconds`: how long a disconnected player can come back without being eliminated.
+- `force-join-seconds`: for how long after the deploy `/br forcejoin` puts a player into the running match as a **player** (own team in SOLO, a team with a free place in DUO/SQUAD). Later, or with `0`, they join as a spectator.
 - `quick-join`: `/br join` without an arena joins the fullest available match.
+- `end-summary`: personal recap in chat at the end of the match.
 
 ### `zone` – the shrinking border
 
@@ -175,6 +186,7 @@ How many of the arena's chest points are used each match, refills, items per che
 | `knockdown` | DUO/SQUAD only: downed instead of eliminated, bleed-out and revive times, revive radius and health, who sees the downed glow. See [Teams, knockdown & colours](../gameplay/teams.md). |
 | `geyser` | Stepping on a geyser launches you into the air to glide: `power`, `glide-delay-ticks`, particle `marker` and `marker-height`. |
 | `deploy` | Skydive: `skydive-default-height` (Y used when an arena has no launch point), `remove-elytra-on-land`, `skydive-max-seconds`. |
+| `map-wall` | [Spawn picker](../gameplay/map-wall.md) (SKYDIVE only): `lock-seconds` (5, last seconds of the countdown in which the choice is locked) and `click-distance` (32 blocks). |
 | `spectator` | Follow camera for eliminated players: `follow`, `auto-follow`, `hud`. See [Spectators](../gameplay/spectators.md). |
 | `team.visuals` | Name colours, teammate glow (needs ProtocolLib), `nametags` (`hidden` / `enemies` / `visible`), SOLO markers. |
 | `effects` | Victory fireworks, zone particle wall and its colour, closed-zone ring, firework colours. |

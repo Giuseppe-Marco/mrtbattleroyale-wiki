@@ -134,7 +134,7 @@ See [Gulag](../gameplay/gulag.md).
 |---|---|---|
 | `/br start [arena]` | Starts the match now (skips the wait for players). Alias: `/br forcestart`. | `br.admin.game` |
 | `/br stop [arena]` | Stops a match (or countdown) without results. | `br.admin.game` |
-| `/br forcejoin <player> [arena]` | Puts a player into an arena (arena optional when only one exists). In the lobby they join normally. In a match that started less than `game.force-join-seconds` ago (default 60, also in the setup GUI → Match rules) they join and **play**: their own team in Solo, a team with a free place in Duo/Squad, deployed like everybody. Later they join as a spectator. | `br.admin.game` |
+| `/br forcejoin <player> [arena]` | Puts a player into an arena (arena optional when only one exists). In the lobby they join normally. In a match that started less than `game.force-join-seconds` ago (default 60, also in the setup GUI → Match rules) they join and **play**: their own team in Solo, a team with a free place in Duo/Squad (or a new team), deployed like everybody. Later they join as a spectator. | `br.admin.game` |
 | `/br kick <player>` | Removes a player from their match. | `br.admin.game` |
 | `/br setlobby` | Sets the main hub at your position (enables hub items and protection there). | `br.admin.setup` |
 | `/br admin` | Toggles build mode in the hub (removes the hub items, lets you build). | `br.admin.build` |
@@ -166,7 +166,7 @@ All need **`br.admin.match`**. Details and examples in [Admin tools](admin-tools
 | `/br admin gulag <open\|close\|auto> [arena]` | Forces the gulag open / closed, or back to automatic. |
 | `/br admin countdown <seconds> [arena]` | Sets (or starts) the start countdown (1-3600 s). |
 | `/br admin team <player> <number>` | Moves a queued player to a team (DUO/SQUAD). |
-| `/br admin broadcast <arena\|all> <message>` | Staff message to the players of one match or of all matches. |
+| `/br admin broadcast <arena\|all> <message>` | Staff message to the players of one match or of all matches. Alias: `/br admin bc`. |
 
 ### Economy
 

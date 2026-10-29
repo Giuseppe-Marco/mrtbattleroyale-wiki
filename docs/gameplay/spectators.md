@@ -1,6 +1,6 @@
 # Spectators
 
-Eliminated players don't have to leave: they stay and **watch the rest of the match**. Players who join a match that has already started also become spectators.
+Eliminated players don't have to leave: they stay and **watch the rest of the match**. Players who join a match that has already started also become spectators (an admin's `/br forcejoin` within `game.force-join-seconds` of the deploy makes them play instead, see [How a match works](match.md#1-lobby-and-queue)).
 
 ## Where you appear
 
