@@ -102,6 +102,8 @@ All need **`br.admin.setup`**, must be run by a player, and cannot be used while
 | `/br setup skydive clear` | Removes all launch points. |
 | `/br setup chest` | Registers the chest you are looking at as a loot chest. |
 | `/br setup removechest` | Removes the chest points near you. |
+| `/br setup scanchests [radius]` | Finds every chest, trapped chest and barrel of the map (within the zone radius, or the given radius) and adds them as loot chests. |
+| `/br setup clearchests [confirm]` | Removes every chest point of the arena (asks for `confirm`). |
 | `/br setup airdrop` | Adds an airdrop landing point. |
 | `/br setup removeairdrop` | Removes nearby airdrop points. |
 | `/br setup geyser` | Adds a geyser. |

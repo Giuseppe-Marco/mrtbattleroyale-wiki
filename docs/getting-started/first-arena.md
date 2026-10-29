@@ -99,6 +99,11 @@ In `SKYDIVE` mode you can add **several launch points** (up to 16): players are 
 
 Register chest points **on the chests themselves**, looking at the chest block. Each match uses only some of the points (by default 3 per player, at least 10, spread over the map) and the unused points become **air** in that match's copy. Add more points than you need. What's inside the chests comes from `loot.yml`: see [Loot, chests & airdrops](../gameplay/loot.md).
 
+!!! tip "Map already full of chests? Find them automatically"
+    `/br setup scanchests` (GUI: **Loot → Find chests automatically**) scans the map within the zone radius and registers every **chest, trapped chest and barrel** it finds as a loot chest, both halves of double chests included. Chests already registered and airdrop points are left alone. The scan loads the map a few chunks at a time (never generating new terrain), shows its progress in the action bar and reports how many chests it added. Give a radius to scan a different area: `/br setup scanchests 300`. Then **save**.
+
+    The container types and the scan speed are in `config.yml` → `setup.chest-scan` (`types`, `chunks-at-once`). To start over, `/br setup clearchests confirm` (GUI: **Remove all chests**, ++shift++ + click) removes every chest point.
+
 ### Setting up the gulag
 
 The gulag gives eliminated players a 1v1 second chance. In the **Gulag** window:

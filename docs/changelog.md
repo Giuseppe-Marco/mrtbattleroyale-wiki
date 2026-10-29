@@ -43,6 +43,7 @@ The biggest update so far. Configs and arenas are upgraded automatically: replac
 
 ### 🛠️ Setup
 - `/br setup` opens the **list of arenas** (click to edit, right click to teleport).
+- **Find chests automatically:** `/br setup scanchests [radius]` (GUI: Loot → Find chests) registers every chest, trapped chest and barrel already built in the map as a loot chest — ideal for downloaded maps full of chests. `/br setup clearchests` removes them all.
 - **Step-by-step chat guide** (`/br setup guide`).
 - **Markers in the map** while editing (chests, airdrops, geysers, spawns, launch points, gulag spots).
 - **Several skydive launch points** per arena, players split between them, teams together.
