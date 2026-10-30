@@ -106,7 +106,7 @@ All need **`br.admin.setup`**, must be run by a player, and cannot be used while
 | `/br setup clearchests [confirm]` | Removes every chest point of the arena (asks for `confirm`). |
 | `/br setup mapwall [width height]` | SKYDIVE arenas: builds the spawn-picker map wall on the wall you look at (default 7×7) and draws the map. See [Spawn picker](../gameplay/map-wall.md). |
 | `/br setup mapwall render\|remove` | Redraws the map of the wall / removes the wall. |
-| `/br setup mapwall style <3d\|flat> [rotation]` | How the map is drawn: a 3D model (default) or flat from above. |
+| `/br setup mapwall render <3d\|flat> [rotation]` | Redraws the same wall (same size, frames and names) as a 3D model or flat from above. `style` does the same. |
 | `/br setup mapwall label add <name>\|remove [name]\|list\|clear` | Place names on the wall, at your position in the arena map. |
 | `/br setup airdrop` | Adds an airdrop landing point. |
 | `/br setup removeairdrop` | Removes nearby airdrop points. |

@@ -27,9 +27,9 @@ Every frame needs a **solid block behind it** and **free space in front**: if so
 | Command | GUI (Launch settings → Map wall) | What it does |
 |---|---|---|
 | `/br setup mapwall [width height]` | Left click | Builds the wall on the wall you look at (replaces the old one) |
-| `/br setup mapwall render` | Right click | Redraws the map (after you changed the map) |
+| `/br setup mapwall render` | Right click | Redraws the map on the same wall, with the arena's current zone (after you changed the map, the center or the radius) |
+| `/br setup mapwall render <3d\|flat> [rotation]` | - | Same, and changes the look: keeps the size, the frames and the place names |
 | `/br setup mapwall remove` | ++shift++ + click | Removes the wall and its picture |
-| `/br setup mapwall style <3d\|flat> [rotation]` | - | Changes how the map is drawn and redraws it |
 
 ### 3D or flat
 
