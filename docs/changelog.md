@@ -6,6 +6,7 @@ Full version history: [Modrinth versions](https://modrinth.com/plugin/battleroya
 
 - **New: 3D map holograms.** `/br hologram add <arena> [size]` places a round miniature of the map turning on itself in your hub or lobby: a full-detail 3D model in the resource pack, about 400 KB per map, copied to ItemsAdder automatically (or a block model that needs no pack), with the arena's name, mode and players above it. Made of display entities, no other plugin needed; it appears only with players nearby. `size`, `rebuild`, `remove`, `list`. Settings: `map-hologram` in config.yml.
 - **Map wall in SPAWNS arenas:** `/br setup mapwall` now works in every arena. In SPAWNS arenas (and events) it only shows the map; in SKYDIVE arenas it stays the spawn picker. `/br setup mapwall render` now also follows the arena's current zone center and radius.
+- Fixed: map walls lost a whole chunk when it contained a single empty column (stepped edges and missing strips on maps with void around them). Redraw the wall with `/br setup mapwall render`; the same fix applies to `/br hologram rebuild`.
 - Fixed: the update checker looked for the wrong Modrinth project, so servers were never told about new versions (and the console said the project was not found). It now checks this project: from this version on you are notified of every update.
 
 ---
