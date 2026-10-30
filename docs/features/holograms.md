@@ -87,4 +87,6 @@ map-hologram:
 
 The text above the model is `map-hologram.label` in the language files (`<arena>`, `<mode>`, `<players>`, `<max>`) and updates by itself.
 
+When several arenas use the **same map** (for example a Solo, a Duo and a Squad one), one hologram is enough: mode and players follow the arena with the most players on that map, so the text says SQUAD while a Squad match fills up. With nobody on any of them it shows the hologram's own arena.
+
 `max-parts` is the main trade-off: every piece is one entity for the clients near the hologram. With the default 800 a varied map shows about 40 cells per side, enough to recognise coasts, lakes and mountains; simpler maps get more detail. Change it, then run `/br hologram rebuild <arena>`.
