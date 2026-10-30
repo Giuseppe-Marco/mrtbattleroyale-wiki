@@ -20,7 +20,7 @@ In **SKYDIVE** arenas you can build a **wall of maps** in the waiting lobby that
 1. Edit the arena (`/br setup` → the arena). It must be a **SKYDIVE** arena with its **zone center and radius** set.
 2. Go to the **waiting lobby** of the arena and look at a **flat vertical wall**: the block you look at becomes the **center** of the map wall.
 3. Run `/br setup mapwall` (7×7 maps), or `/br setup mapwall <width> <height>` (1 to 15 maps per side). In the GUI: **Spawns → Launch settings → Map wall**, left click.
-4. The plugin places invisible, fixed glow item frames and **draws the map**: the area of the zone, with the real block colours and height shading, like vanilla maps. The progress is shown in the action bar.
+4. The plugin places invisible, fixed glow item frames and **draws the map** as a **3D model** of the playable area, seen at an angle: real block colours, relief, block sides, buildings, light and shadows. The progress is shown in the action bar.
 
 Every frame needs a **solid block behind it** and **free space in front**: if something is in the way, the command tells you how many places are blocked and builds nothing.
 
@@ -29,6 +29,16 @@ Every frame needs a **solid block behind it** and **free space in front**: if so
 | `/br setup mapwall [width height]` | Left click | Builds the wall on the wall you look at (replaces the old one) |
 | `/br setup mapwall render` | Right click | Redraws the map (after you changed the map) |
 | `/br setup mapwall remove` | ++shift++ + click | Removes the wall and its picture |
+| `/br setup mapwall style <3d\|flat> [rotation]` | - | Changes how the map is drawn and redraws it |
+
+### 3D or flat
+
+| Style | What you get |
+|---|---|
+| `3d` (default) | A round model of the playable area seen at an angle, like a tabletop model. `rotation` turns it (degrees, default 45). |
+| `flat` | The map seen straight from above, like a vanilla map, north at the top. Walls built before the 3D view stay flat until you change them. |
+
+In 3D every point of the picture is linked to the exact point of the map it shows, so clicks, pins and place names stay accurate over mountains and buildings. Clicking the background around the model does nothing.
 
 ## Place names
 

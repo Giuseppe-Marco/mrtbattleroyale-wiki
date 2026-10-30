@@ -2,8 +2,9 @@
 
 Full version history: [Modrinth versions](https://modrinth.com/plugin/battleroyalepremium/versions).
 
-## 2.1.2 — Update checker fix
+## 2.1.2 — 3D map wall
 
+- **New: 3D map wall.** The spawn picker wall now draws the arena as a **3D model** seen at an angle, with relief, block sides, buildings, light and shadows. Clicks, pins and place names stay exact over the terrain. `/br setup mapwall style <3d|flat> [rotation]` changes the view and redraws it; `flat` is the old view from above. Existing walls stay flat until you change them.
 - Fixed: the update checker looked for the wrong Modrinth project, so servers were never told about new versions (and the console said the project was not found). It now checks this project: from this version on you are notified of every update.
 
 ---
