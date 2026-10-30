@@ -2,6 +2,28 @@
 
 A **3D miniature of an arena** floating in your hub or lobby and turning slowly on itself, like a painted model: coasts, biomes, mountains and big buildings in plain colours, with the arena's name, mode and players above it. It's made of display entities, so **no other plugin is needed**.
 
+## Two kinds of model
+
+| | **Full-detail model** (default) | **Block model** |
+|---|---|---|
+| Detail | Up to 512 columns per side, with the real colours and relief of the map | About 40 cells per side |
+| Entities | **One**, whatever the size | Up to `max-parts` |
+| Needs | A **resource pack** (ItemsAdder or your own) | Nothing |
+| Pack weight | About 130 KB per map at resolution 128, 400 KB at 256 | None |
+
+The block model is used when `model.enabled` is `false`, or until an arena has a generated model.
+
+!!! warning "Players need the pack"
+    Without it the full-detail model is a broken cube. If you can't use a resource pack, set `model.enabled: false`.
+
+### With ItemsAdder
+
+`/br hologram rebuild <arena>` (or the first `add`) writes the model into `plugins/ItemsAdder/contents/mrtbattleroyale/`. Then run **`/iazip`**: that's all.
+
+### With your own pack
+
+The model is written in `plugins/MRTBattleRoyale/hologram-pack/assets/mrtbr/`: copy that `assets` folder into your resource pack. Models use the `items/` format of Minecraft 1.21.4+.
+
 ## Adding one
 
 Stand where you want it and run:
@@ -47,6 +69,14 @@ map-hologram:
   # Most pieces of each model: more = more detail, more work for the clients.
   # Needs a rebuild.
   max-parts: 800
+  # The full-detail model: one 3D model in the resource pack, shown by a single
+  # entity. With enabled false the block model is used.
+  model:
+    enabled: true
+    # Columns per side (32-512). More = more detail, heavier pack.
+    resolution: 256
+    # Height steps. Fewer = lighter, flatter relief.
+    levels: 24
   # Height of the text above the highest point of the model.
   label-height: 1.0
   # It appears when a player is within these blocks.
