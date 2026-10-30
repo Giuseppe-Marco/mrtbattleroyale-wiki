@@ -29,7 +29,7 @@ Each arena has a **deploy mode**:
 
 In `SKYDIVE` mode you can add **several launch points** (up to 16): players are split between them, each team stays together and every point gets about the same number of players. Gulag winners are relaunched from the point closest to the zone. Set launch points while **flying high in the map world**; your facing direction is saved too (look slightly down for a nice start).
 
-SKYDIVE arenas can also get a **spawn-picker map wall** in their waiting lobby, where players click the point they want to drop on: see [Spawn picker (map wall)](../gameplay/map-wall.md).
+Any arena can also get a **map wall** in its waiting lobby. In SKYDIVE arenas players click the point they want to drop on; in SPAWNS arenas it only shows the map: see [Map wall](../gameplay/map-wall.md).
 
 ## 3. Set it up
 

@@ -1,12 +1,12 @@
-# Spawn picker (map wall)
+# Map wall
 
-In **SKYDIVE** arenas you can build a **wall of maps** in the waiting lobby that shows the arena from above. While waiting for the match, players **click a point of the wall** to choose where they drop: when the match starts they are launched in the air above that point and glide down.
+A **wall of maps** in the waiting lobby that shows the arena from above, like a big vanilla map.
 
-!!! info "Where it works"
-    - Only arenas with the **SKYDIVE** deploy mode (in SPAWNS arenas the wall can't be built).
-    - Never in **events**: event matches always use the arena's launch points.
+!!! info "What it does"
+    - **SKYDIVE arenas:** it is also a **spawn picker**. Players click a point of the wall to choose where they drop: when the match starts they are launched in the air above that point and glide down.
+    - **SPAWNS arenas and events:** it **only shows the map**. Clicking it does nothing.
 
-## For players
+## For players (SKYDIVE arenas)
 
 - In the waiting lobby, **right-click** (or left-click) the point of the wall where you want to land. You can click from up to 32 blocks away.
 - A red pin appears on the wall where you chose. **Only you** see it (party members see their leader's pin). You can change it as many times as you want.
@@ -17,10 +17,10 @@ In **SKYDIVE** arenas you can build a **wall of maps** in the waiting lobby that
 
 ## For admins: building the wall
 
-1. Edit the arena (`/br setup` → the arena). It must be a **SKYDIVE** arena with its **zone center and radius** set.
+1. Edit the arena (`/br setup` → the arena). Its **zone center and radius** must be set.
 2. Go to the **waiting lobby** of the arena and look at a **flat vertical wall**: the block you look at becomes the **center** of the map wall.
 3. Run `/br setup mapwall` (7×7 maps), or `/br setup mapwall <width> <height>` (1 to 15 maps per side). In the GUI: **Spawns → Launch settings → Map wall**, left click.
-4. The plugin places invisible, fixed glow item frames and **draws the map** as a **3D model** of the playable area, seen at an angle: real block colours, relief, block sides, buildings, light and shadows. The progress is shown in the action bar.
+4. The plugin places invisible, fixed glow item frames and **draws the map** seen straight from above, with the real block colours and height shading, like vanilla maps. North is at the top. The progress is shown in the action bar.
 
 Every frame needs a **solid block behind it** and **free space in front**: if something is in the way, the command tells you how many places are blocked and builds nothing.
 
@@ -28,17 +28,7 @@ Every frame needs a **solid block behind it** and **free space in front**: if so
 |---|---|---|
 | `/br setup mapwall [width height]` | Left click | Builds the wall on the wall you look at (replaces the old one) |
 | `/br setup mapwall render` | Right click | Redraws the map on the same wall, with the arena's current zone (after you changed the map, the center or the radius) |
-| `/br setup mapwall render <3d\|flat> [rotation]` | - | Same, and changes the look: keeps the size, the frames and the place names |
 | `/br setup mapwall remove` | ++shift++ + click | Removes the wall and its picture |
-
-### 3D or flat
-
-| Style | What you get |
-|---|---|
-| `3d` (default) | A round model of the playable area seen at an angle, like a tabletop model. `rotation` turns it (degrees, default 45). |
-| `flat` | The map seen straight from above, like a vanilla map, north at the top. Walls built before the 3D view stay flat until you change them. |
-
-In 3D every point of the picture is linked to the exact point of the map it shows, so clicks, pins and place names stay accurate over mountains and buildings. Clicking the background around the model does nothing.
 
 ## Place names
 
