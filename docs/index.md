@@ -73,7 +73,7 @@
 | **Teams** | Knockdown & revive, team colours, teammate glow (with ProtocolLib) |
 | **Spectators** | A camera that follows the players still alive |
 | **Events** | Registration, event lobby, rotation or random map draw, points, prizes, schedule |
-| **Server** | Hub items, arena menu, NPCs and signs, separate BR chats, plugin-managed scoreboards |
+| **Server** | Hub items, arena menu, NPCs and signs, 3D map holograms, separate BR chats, plugin-managed scoreboards |
 | **Progression** | Stats, levels, coins, a cosmetics shop and leaderboards (SQLite or MySQL) |
 
 !!! info "Compatibility"

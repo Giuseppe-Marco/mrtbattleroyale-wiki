@@ -92,6 +92,7 @@ nav:
   - Events: events.md
   - Server features:
       - Hub, NPCs & signs: features/hub.md
+      - Map holograms: features/holograms.md
       - Chat: features/chat.md
       - Scoreboard: features/scoreboard.md
       - Stats, levels & shop: features/progression.md

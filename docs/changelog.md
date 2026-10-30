@@ -2,8 +2,9 @@
 
 Full version history: [Modrinth versions](https://modrinth.com/plugin/battleroyalepremium/versions).
 
-## 2.1.2 — 3D map wall
+## 2.1.2 — 3D map wall & holograms
 
+- **New: 3D map holograms.** `/br hologram add <arena> [size]` places a round miniature of the map, turning on itself, in your hub or lobby, with the arena's name, mode and players above it. Made of display entities, no other plugin needed; it appears only with players nearby. `size`, `rebuild`, `remove`, `list`. Settings: `map-hologram` in config.yml.
 - **New: 3D map wall.** The spawn picker wall now draws the arena as a **3D model** seen at an angle, with relief, block sides, buildings, light and shadows. Clicks, pins and place names stay exact over the terrain. `/br setup mapwall render 3d [rotation]` redraws an existing wall in 3D, keeping its size, frames and place names; `render flat` is the old view from above. Existing walls stay flat until you change them. `render` now also follows the arena's current zone center and radius.
 - Fixed: the update checker looked for the wrong Modrinth project, so servers were never told about new versions (and the console said the project was not found). It now checks this project: from this version on you are notified of every update.
 

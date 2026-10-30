@@ -129,6 +129,18 @@ See [Gulag](../gameplay/gulag.md).
 | `/br setup gulag removewait` | Removes nearby waiting points. |
 | `/br setup gulag clearwait` | Removes all waiting points. |
 
+### Map holograms
+
+| Command | Description |
+|---|---|
+| `/br hologram add <arena> [size]` | Places a 3D miniature of the arena here (see [Map holograms](../features/holograms.md)). |
+| `/br hologram size <size>` | Changes the size of the nearest hologram. |
+| `/br hologram rebuild <arena>` | Reads the map again for the model. |
+| `/br hologram remove` | Removes the nearest hologram. |
+| `/br hologram list` | Lists the holograms. |
+
+Permission: `br.admin.setup`. Player only.
+
 ## Match and server management
 
 | Command | Description | Permission |

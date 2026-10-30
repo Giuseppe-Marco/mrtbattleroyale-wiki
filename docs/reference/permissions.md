@@ -71,7 +71,7 @@ Operators have these by default.
 
 | Permission | What it allows |
 |---|---|
-| `br.admin.setup` | Arena setup: `/br setup ...`, the setup GUI and chat guide, `/br setlobby`. Also the "start the setup guide" hint on join while no arena exists. |
+| `br.admin.setup` | Arena setup: `/br setup ...`, the setup GUI and chat guide, `/br setlobby`, `/br hologram`. Also the "start the setup guide" hint on join while no arena exists. |
 | `br.admin.game` | `/br start`, `/br forcestart`, `/br stop`, `/br forcejoin`, `/br kick`. |
 | `br.admin.match` | Match tools: `/br admin info`, `spectate`, `revive`, `eliminate`, `end`, `zone`, `skipzone`, `deathmatch`, `airdrop`, `refill`, `gulag`, `countdown`, `team`, `broadcast` (`bc`). |
 | `br.admin.build` | Build mode in the hub (`/br admin` with no arguments) and building in the hub while it is on. |
