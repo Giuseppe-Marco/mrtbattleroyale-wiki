@@ -128,6 +128,17 @@ See [Gulag](../gameplay/gulag.md).
 | `/br setup gulag removewait` | Removes nearby waiting points. |
 | `/br setup gulag clearwait` | Removes all waiting points. |
 
+### Enabling and disabling arenas
+
+| Command | Description |
+|---|---|
+| `/br arena disable <arena>` | Switches an arena **off**: it leaves the arena menu, quick join, signs and events, and its NPCs and holograms disappear. Players waiting in its lobby are sent back; a match in progress is played to the end first. |
+| `/br arena enable <arena>` | Switches it back **on**: menu, NPCs and holograms come back. |
+| `/br arena toggle <arena>` | Switches it the other way. |
+| `/br arena list` | Every arena with its state (enabled, in a match, setup incomplete, disabled). |
+
+Permission: `br.admin.game`. Also in the setup GUI: **Shift+click** an arena in the `/br setup` list, or the green / grey dye at the top right of the arena's setup window. Disabled arenas are kept in `disabled-arenas.yml` and stay disabled after a restart. You can still edit a disabled arena; saving it doesn't switch it back on. An arena used by a running event can't be disabled.
+
 ### Map holograms
 
 | Command | Description |
