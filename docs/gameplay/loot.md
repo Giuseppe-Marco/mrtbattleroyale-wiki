@@ -22,7 +22,8 @@ The default file has four tiers:
 
 | Field | Meaning |
 |---|---|
-| `material` | Bukkit material name (required) |
+| `material` | Bukkit material name (required, unless `itemsadder` is used) |
+| `itemsadder` | An **ItemsAdder** item instead of `material`: `namespace:id` (see below) |
 | `weight` | Chance inside the tier (default 1, `0` = disabled) |
 | `min` / `max` | Stack size range (default 1) |
 | `enchantments` | Map of `<enchant key>: <level>` (vanilla keys, lowercase) |
@@ -51,6 +52,25 @@ tiers:
         lore:
           - '<gray>Forged in the heart of the storm.'
 ```
+
+### ItemsAdder items
+
+With [ItemsAdder](https://www.spigotmc.org/resources/73355/) installed, any of its items can be loot: write `itemsadder` instead of `material`.
+
+```yaml
+tiers:
+  rare:
+    weight: 30
+    items:
+      - { itemsadder: adventurer_tools:adventurer_sword, weight: 5 }
+      - { itemsadder: adventurer_tools:adventurer_bow, weight: 3 }
+```
+
+- The id is the one of ItemsAdder, `namespace:id`.
+- `weight`, `min` / `max`, `enchantments`, `name` and `lore` work the same. Leave `name` and `lore` out to keep the item's own.
+- The item is read when the chest is filled, so it always matches ItemsAdder (after `/iazip` and its reload too).
+- An id that doesn't exist, or ItemsAdder not installed: that line gives nothing and the log says so once. The rest of the loot works normally.
+- Airdrops use the same tables, so ItemsAdder items work there too.
 
 !!! tip
     A tier with `weight: 0` never appears in normal chests, but airdrops can still use it. Handy for airdrop-only loot.
