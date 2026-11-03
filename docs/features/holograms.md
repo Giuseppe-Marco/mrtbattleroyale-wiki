@@ -9,7 +9,7 @@ A **3D miniature of an arena** floating in your hub or lobby and turning slowly 
 | Detail | Up to 512 columns per side, with the real colours and relief of the map | About 40 cells per side |
 | Entities | **One**, whatever the size | Up to `max-parts` |
 | Needs | A **resource pack** (ItemsAdder or your own) | Nothing |
-| Pack weight | About 130 KB per map at resolution 128, 400 KB at 256 | None |
+| Pack weight | About 300 KB per map at resolution 256 | None |
 
 The block model is used when `model.enabled` is `false`, or until an arena has a generated model.
 
@@ -52,7 +52,8 @@ All of them need the `br.admin.setup` permission.
     - Holograms exist only while a player is within `activation-radius`: nobody around, no entities. They are never saved in the world.
     - They follow the arena if you rename it, and go away if you delete it.
     - The model uses **plain colour blocks** (concrete, terracotta, smooth sandstone) chosen from the real colours of the map, the same colours as the map wall: stretched textures look bad at this scale.
-    - **Trees don't count as height** (forests stay green, without spikes) and the tallest 3% of the map is cut, so a tower doesn't become a pillar. The relief is capped by `max-relief`.
+    - **Trees don't count as height** (forests stay green, without spikes). **Buildings keep their real height**: glass, slabs, stairs and walls count, and every column of the full-detail model takes the highest point of its area, so narrow towers don't get flattened.
+    - The full-detail model is in **real proportions** (times `model.height-scale`), capped by `model.max-height`; sides hidden by a taller neighbour are left out of the file to keep the pack light.
 
 ## Settings (`config.yml`)
 
@@ -78,8 +79,12 @@ map-hologram:
     enabled: true
     # Columns per side (32-512). More = more detail, heavier pack.
     resolution: 256
-    # Height steps. Fewer = lighter, flatter relief.
-    levels: 24
+    # Heights in real proportion to the width, times this (1 = true scale).
+    height-scale: 1.5
+    # ... but never taller than this share of the model's width.
+    max-height: 0.4
+    # Blocks per height step: 1 = every block (heavier), 2 = lighter.
+    height-step: 2
   # Height of the text above the highest point of the model.
   label-height: 1.0
   # It appears when a player is within these blocks.
