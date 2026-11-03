@@ -20,6 +20,9 @@ The block model is used when `model.enabled` is `false`, or until an arena has a
 
 `/br hologram rebuild <arena>` (or the first `add`) writes the model into `plugins/ItemsAdder/contents/mrtbattleroyale/`. Then run **`/iazip`**: that's all.
 
+!!! tip "Older clients (1.21.1)"
+    The plain model uses the `item_model` component, which exists only from 1.21.4. For older clients, create an ItemsAdder item named **`mrtbr:map_<arena>`** (arena name in lower case, e.g. `mrtbr:map_lighthouse`) that uses the model `mrtbr:item/map_<arena>` written by the plugin. When that item exists the hologram uses it, with its custom model data; otherwise it falls back to `item_model`.
+
 ### With your own pack
 
 The model is written in `plugins/MRTBattleRoyale/hologram-pack/assets/mrtbr/`: copy that `assets` folder into your resource pack. Models use the `items/` format of Minecraft 1.21.4+.
