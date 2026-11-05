@@ -62,8 +62,8 @@ The first edit copies the global phases into the arena as a starting point. More
 | Button | What it does |
 |---|---|
 | Add spawn / Clear spawns | Add a spawn at your position / remove them all (SPAWNS mode) |
-| Launch points (skydive) | Left click adds a point here (up to 16), right click removes the ones within 15 blocks, ++shift++ + click removes them all |
-| Launch settings | `deploy.skydive-default-height`, `deploy.skydive-max-seconds`, `deploy.remove-elytra-on-land` (SKYDIVE only) |
+| Launch points (skydive) | Left click adds a point here (up to 16, `deploy.max-launch-points`), right click removes the ones within 15 blocks, ++shift++ + click removes them all |
+| Launch settings | `deploy.skydive-default-height`, `deploy.skydive-max-seconds`, `deploy.remove-elytra-on-land`, `deploy.scatter` (scattered launch) and `deploy.scatter-radius` (SKYDIVE only) |
 | Launch settings → Map wall | Left click builds the map wall on the wall you look at (7×7), right click redraws the map, ++shift++ + click removes it. A spawn picker in SKYDIVE arenas, map display only in SPAWNS arenas. See [Map wall](../gameplay/map-wall.md) |
 
 ### Loot & Features

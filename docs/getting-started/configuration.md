@@ -185,7 +185,7 @@ How many of the arena's chest points are used each match, refills, items per che
 |---|---|
 | `knockdown` | DUO/SQUAD only: downed instead of eliminated, bleed-out and revive times, revive radius and health, who sees the downed glow. See [Teams, knockdown & colours](../gameplay/teams.md). |
 | `geyser` | Stepping on a geyser launches you into the air to glide: `power`, `glide-delay-ticks`, particle `marker` and `marker-height`. |
-| `deploy` | Skydive: `skydive-default-height` (Y used when an arena has no launch point), `remove-elytra-on-land`, `skydive-max-seconds`. |
+| `deploy` | Skydive: `skydive-default-height` (Y used when an arena has no launch point), `remove-elytra-on-land`, `skydive-max-seconds`, `max-launch-points` (most launch points per arena, 1-200, default 16), `scatter` (each team drops from its own random point in the zone) and `scatter-radius` (share of the zone radius they can reach). |
 | `map-wall` | [Map wall](../gameplay/map-wall.md), spawn picker of SKYDIVE arenas: `lock-seconds` (5, last seconds of the countdown in which the choice is locked) and `click-distance` (32 blocks). |
 | `spectator` | Follow camera for eliminated players: `follow`, `auto-follow`, `hud`. See [Spectators](../gameplay/spectators.md). |
 | `team.visuals` | Name colours, teammate glow (needs ProtocolLib), `nametags` (`hidden` / `enemies` / `visible`), SOLO markers. |

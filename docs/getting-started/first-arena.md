@@ -27,7 +27,7 @@ Each arena has a **deploy mode**:
 | `SPAWNS` | Each player is teleported to a ground spawn and stays frozen for the grace period (`game.grace-period-seconds`), then the fight begins. | **One spawn per player.** The number of spawns is also the real maximum of players. |
 | `SKYDIVE` | Everyone appears high above the map with a locked glider (elytra) and glides down, choosing where to land. Fall damage is off until landing and the glider is removed on the ground. | Optional **launch points**. Without any, players drop from above the zone centre at `deploy.skydive-default-height` (default Y 180). |
 
-In `SKYDIVE` mode you can add **several launch points** (up to 16): players are split between them, each team stays together and every point gets about the same number of players. Gulag winners are relaunched from the point closest to the zone. Set launch points while **flying high in the map world**; your facing direction is saved too (look slightly down for a nice start).
+In `SKYDIVE` mode you can add **several launch points** (up to 16, or more with `deploy.max-launch-points`): players are split between them, each team stays together and every point gets about the same number of players. Want everyone spread over the whole map? Turn on the **scattered launch** instead: every team gets its own random point, no points to place. Gulag winners are relaunched from the point closest to the zone. Set launch points while **flying high in the map world**; your facing direction is saved too (look slightly down for a nice start).
 
 Any arena can also get a **map wall** in its waiting lobby. In SKYDIVE arenas players click the point they want to drop on; in SPAWNS arenas it only shows the map: see [Map wall](../gameplay/map-wall.md).
 
