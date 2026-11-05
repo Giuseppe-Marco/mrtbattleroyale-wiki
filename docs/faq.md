@@ -111,9 +111,9 @@ There are none: every command is a sub-command of `/br` (alias `/battleroyale`),
 
 Check the permission in [Permissions](reference/permissions.md). Player permissions are granted to everyone through `br.player`, unless your permission plugin negates them. `/br resetstats` needs `br.admin.resetstats`, which is **not** included in `br.admin`.
 
-### `/br npc` says Citizens is missing
+### `/br npc` says there is no NPC plugin
 
-NPC commands need the Citizens plugin. Without it, use `[br]` join signs or the arena menu instead.
+NPC commands need **Citizens** or **FancyNpcs** (FancyNpcs on Paper only). Without them, use `[br]` join signs or the arena menu instead. If both are installed, `npc.provider` in `config.yml` chooses which one is used.
 
 ## Statistics
 

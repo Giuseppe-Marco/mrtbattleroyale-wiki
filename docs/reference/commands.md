@@ -200,15 +200,15 @@ Need **`br.admin.economy`**. Work for offline players known to the server. Amoun
 | `/br coins <give\|take\|set> <player> <amount>` | Changes a player's coins. |
 | `/br xp <give\|take\|set> <player> <amount>` | Changes a player's XP (the level follows the XP). |
 
-### NPCs (Citizens)
+### NPCs (Citizens or FancyNpcs)
 
-Need **`br.admin.npc`** and the Citizens plugin. See [Hub, NPCs & signs](../features/hub.md).
+Need **`br.admin.npc`** and Citizens or FancyNpcs. See [Hub, NPCs & signs](../features/hub.md).
 
 | Command | Description |
 |---|---|
 | `/br npc create play` | Creates an NPC at your position that opens the arena menu. |
 | `/br npc create join <arena>` | Creates an NPC that joins the arena, with a live hologram. |
-| `/br npc remove [id]` | Removes a linked NPC by id, or (no id) the NPC selected with Citizens' `/npc select`. |
+| `/br npc remove [id]` | Removes a linked NPC by id, or (no id) the NPC selected with Citizens' `/npc select` / the nearest one within 6 blocks with FancyNpcs. |
 | `/br npc list` | Lists the linked NPCs. |
 
 `list` and `remove <id>` also work from the console.

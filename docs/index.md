@@ -78,4 +78,4 @@
 
 !!! info "Compatibility"
     Paper or Spigot **1.21.4 – 1.21.11** and **26.1 / 26.2**, Java 21. See [Spigot](getting-started/installation.md#spigot) for the few differences.
-    Optional: PlaceholderAPI, ProtocolLib, Citizens, Multiverse-Core.
+    Optional: PlaceholderAPI, ProtocolLib, Citizens or FancyNpcs, ItemsAdder, Multiverse-Core.

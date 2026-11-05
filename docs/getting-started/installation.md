@@ -34,7 +34,7 @@ None of these are required. Install them only if you want what they add.
 |---|---|
 | **PlaceholderAPI** | `%brbattle_*%` placeholders for scoreboards, tab lists, holograms... See [Placeholders](../reference/placeholders.md). |
 | **ProtocolLib** | Teammates glow through walls, visible **only to their own team** (DUO/SQUAD). Without it the teammate glow is off, because a normal glow would reveal teams to enemies too. |
-| **Citizens** | Clickable arena NPCs with `/br npc`. See [Hub, NPCs & signs](../features/hub.md). |
+| **Citizens** or **FancyNpcs** | Clickable arena NPCs with `/br npc`, with a live status above their head. FancyNpcs is Paper only. See [Hub, NPCs & signs](../features/hub.md). |
 | **Multiverse-Core** | Handy for loading your map and lobby worlds. MRTBattleRoyale loads after it, so the arena maps already exist when the plugin starts. |
 
 !!! tip "TAB plugin"

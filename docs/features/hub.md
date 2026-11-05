@@ -128,24 +128,40 @@ arena-menu:
 
 Quick join uses the same matchmaking as `/br join solo|duo|squad`.
 
-## NPCs (Citizens)
+## NPCs (Citizens or FancyNpcs)
 
-With the **Citizens** plugin installed you can place clickable NPCs. Commands need `br.admin.npc`.
+With **Citizens** or **FancyNpcs** installed you can place clickable NPCs. Commands need `br.admin.npc` and are the same with both plugins.
 
 | Command | What it does |
 |---|---|
 | `/br npc create play` | Creates an NPC at your position that opens the arena menu |
 | `/br npc create join <arena>` | Creates an NPC that joins that arena directly |
-| `/br npc remove` | Removes the NPC you have selected in Citizens |
+| `/br npc remove` | Citizens: removes the NPC you selected with `/npc select`. FancyNpcs: removes the nearest Battle Royale NPC within 6 blocks |
 | `/br npc remove <id>` | Removes a linked NPC by its id (works from the console) |
 | `/br npc list` | Lists the linked NPCs and their action (works from the console) |
 
 **Join NPCs** have a live hologram above their head with the map, the mode, the players (`players/max` and the state) and, while waiting, how many players are still missing. It updates every second. Its lines are in the messages file (`npc` section).
 
-!!! info "How NPCs are stored"
-    The NPCs themselves belong to Citizens: MRTBattleRoyale only stores the link (NPC id → action) in `npcs.yml`. `/br npc remove <id>` refuses NPCs that are not linked, so it can never delete your shopkeepers or quest NPCs. If you delete a linked NPC through Citizens, the link is cleaned up automatically.
+**Skins, poses, equipment:** set them with the NPC plugin's own commands, e.g. `/npc skin <name>` (Citizens, with the NPC selected) or `/npc skin <id> <name>` (FancyNpcs, the id is shown when you create it and in `/br npc list`). They are kept across restarts.
 
-Without Citizens, `/br npc` just tells you that Citizens is missing. Use [join signs](#join-signs) instead.
+When an arena is [switched off](../reference/commands.md#enabling-and-disabling-arenas), its join NPCs disappear and come back when you switch it on again.
+
+!!! info "How NPCs are stored"
+    The NPCs themselves belong to the NPC plugin: MRTBattleRoyale only stores the link (NPC → action), in `npcs.yml` for Citizens (by number) and in `npcs-fancynpcs.yml` for FancyNpcs (by name, e.g. `br_play`, `br_lighthouse`). `/br npc remove <id>` refuses NPCs that are not linked, so it can never delete your shopkeepers or quest NPCs. If you delete a linked NPC through the NPC plugin, the link is cleaned up automatically.
+
+### Which plugin
+
+`npc.provider` in `config.yml` (restart after changing it):
+
+```yaml
+npc:
+  # auto = Citizens when it is installed, otherwise FancyNpcs.
+  provider: auto   # auto | citizens | fancynpcs
+```
+
+FancyNpcs runs on **Paper only**; on Spigot use Citizens. The two don't share NPCs: switching provider doesn't move the existing ones.
+
+Without either plugin, `/br npc` tells you that an NPC plugin is missing. Use [join signs](#join-signs) instead.
 
 ## Join signs
 
