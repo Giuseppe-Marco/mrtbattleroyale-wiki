@@ -1,6 +1,6 @@
 # MRTBattleRoyale
 
-**A complete Battle Royale minigame for Paper servers**: solo, duo and squad matches with a shrinking zone, skydive deploy, loot chests and airdrops, a gulag for a second chance, knockdowns, events with their own leaderboard, and a setup that is done almost entirely from in-game menus.
+**A complete Battle Royale minigame for Paper and Spigot servers**: solo, duo and squad matches with a shrinking zone, skydive deploy, loot chests and airdrops, a gulag for a second chance, knockdowns, events with their own leaderboard, and a setup that is done almost entirely from in-game menus.
 
 [Get it on Modrinth](https://modrinth.com/plugin/battleroyalepremium){ .md-button .md-button--primary }
 [Install it](getting-started/installation.md){ .md-button }
@@ -77,5 +77,5 @@
 | **Progression** | Stats, levels, coins, a cosmetics shop and leaderboards (SQLite or MySQL) |
 
 !!! info "Compatibility"
-    Paper **1.21.4 – 1.21.11** and **26.1 / 26.2**, Java 21.
+    Paper or Spigot **1.21.4 – 1.21.11** and **26.1 / 26.2**, Java 21. See [Spigot](getting-started/installation.md#spigot) for the few differences.
     Optional: PlaceholderAPI, ProtocolLib, Citizens, Multiverse-Core.

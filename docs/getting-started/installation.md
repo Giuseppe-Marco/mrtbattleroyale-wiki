@@ -6,10 +6,25 @@ This page gets MRTBattleRoyale running on your server: what you need, which file
 
 | What | Version |
 |---|---|
-| Server software | **Paper 1.21.4 – 1.21.11** or **Paper 26.1 / 26.2** |
+| Server software | **Paper** or **Spigot**, **1.21.4 – 1.21.11** or **26.1 / 26.2** (Paper recommended) |
 | Java | **21** or newer |
 
-The same jar works on both generations. On 26.x the plugin detects the new world layout (worlds stored under `dimensions/`) and handles it for you.
+The same jar works on both generations and on both servers. On 26.x the plugin detects the new world layout (worlds stored under `dimensions/`) and handles it for you.
+
+### Spigot
+
+The same jar runs on **Spigot**: the plugin detects the server at start-up. Paper forks (Purpur and similar) count as Paper.
+
+- **First start:** the server downloads **Adventure**, the text library that Paper has built in, into its `libraries` folder (about 1 MB; Paper downloads it too but keeps using its own). The server needs internet access once; after that it's cached.
+- **What's different on Spigot:**
+
+| | Paper | Spigot |
+|---|---|---|
+| Downed players | Crawl on the ground | Stand (only the crawling pose is missing; knockdowns work the same) |
+| Sidebar scoreboard | No numbers on the right | Shows the red score numbers on the right |
+| Map wall, chest scan, hologram models | Map read in the background | Map read on the main thread, 2 chunks per tick: slower, no lag spikes |
+
+Everything else (matches, zone, gulag, loot, events, menus, colours, hex colours, chats, spectator camera, map walls, holograms) works the same. Paper is still recommended: it's faster and has the extras above.
 
 ### Optional plugins
 
