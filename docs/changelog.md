@@ -2,12 +2,17 @@
 
 Full version history: [Modrinth versions](https://modrinth.com/plugin/battleroyalepremium/versions).
 
-## 2.1.2 — Map holograms, Spigot & FancyNpcs
+## 2.1.3 — FancyNpcs & scattered launch
+
+- **FancyNpcs support:** `/br npc` now works with FancyNpcs too (same commands and live status). `npc.provider` in config.yml picks the plugin when both are installed.
+- **Scattered launch:** with `deploy.scatter: true` (or Launch settings in the setup GUI) every team drops from its own random point in the zone, spread apart. No launch points to place.
+- **More launch points:** the limit of 16 per arena is now `deploy.max-launch-points` in game.yml (up to 200).
+
+---
+
+## 2.1.2 — Map holograms & Spigot support
 
 - **New: Spigot support.** The same jar now runs on Spigot as well as Paper (1.21.4+ and 26.x). On the first start the text library (Adventure) is downloaded automatically. Small differences on Spigot: downed players don't crawl, the sidebar shows the score numbers, map walls / chest scans / hologram models read the map more slowly. See [Spigot](getting-started/installation.md#spigot).
-- **New: scattered launch.** In SKYDIVE arenas, `deploy.scatter: true` (or **Launch settings → Scattered launch** in the setup GUI) drops every team from its own random point inside the zone, spread as far apart as possible: no launch points to place. `deploy.scatter-radius` sets how close to the edge they can go.
-- The limit of 16 launch points per arena is now `deploy.max-launch-points` in game.yml (up to 200).
-- **New: FancyNpcs support.** `/br npc` now works with **FancyNpcs** as well as Citizens: same commands, same live status above the join NPCs, skins and poses set with `/npc` are kept. `npc.provider` in config.yml picks the plugin when both are installed (FancyNpcs is Paper only).
 - **New: ItemsAdder items in the loot.** In `loot.yml`, `{ itemsadder: namespace:id, weight: 5 }` instead of `material` puts any ItemsAdder item in chests and airdrops (with min/max, enchantments, name and lore as usual). Missing ids are skipped with one warning in the log.
 - Map holograms use the ItemsAdder item `mrtbr:map_<arena>` when it exists (custom model data for 1.21.1 clients), else the 1.21.4+ `item_model`.
 - **New: enable / disable arenas.** `/br arena disable <arena>` switches an arena off: it leaves the arena menu, quick join, signs and events, and its NPCs and holograms disappear (players waiting in its lobby are sent back, a running match ends first). `/br arena enable <arena>` brings everything back; `toggle` and `list` too. In the setup GUI: Shift+click in the `/br setup` list, or the switch in the arena's window. Permission `br.admin.game`.
