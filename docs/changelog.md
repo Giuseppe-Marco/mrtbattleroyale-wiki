@@ -2,6 +2,12 @@
 
 Full version history: [Modrinth versions](https://modrinth.com/plugin/battleroyalepremium/versions).
 
+## 2.1.4 — Scatter area
+
+- **Scattered launch area:** choose where the scattered launch drops players with `/br setup skydive area pos1` / `pos2` (corners where you stand) or `/br setup skydive area <x1> <z1> <x2> <z2>`. Points stay inside the zone whenever the area overlaps it. `area clear` goes back to the whole zone.
+
+---
+
 ## 2.1.3 — FancyNpcs & scattered launch
 
 - **FancyNpcs support:** `/br npc` now works with FancyNpcs too (same commands and live status). `npc.provider` in config.yml picks the plugin when both are installed.

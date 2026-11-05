@@ -100,6 +100,9 @@ All need **`br.admin.setup`**, must be run by a player, and cannot be used while
 | `/br setup skydive` | Adds a skydive launch point at your position (fly high above the map). |
 | `/br setup skydive remove` | Removes the launch points near you. |
 | `/br setup skydive clear` | Removes all launch points. |
+| `/br setup skydive area pos1\|pos2` | Sets a corner of the scattered-launch area where you stand. |
+| `/br setup skydive area <x1> <z1> <x2> <z2>` | Sets the scattered-launch area from coordinates (e.g. `-100 -100 100 100`). |
+| `/br setup skydive area clear` | Removes the area: the scattered launch uses the whole zone. |
 | `/br setup chest` | Registers the chest you are looking at as a loot chest. |
 | `/br setup removechest` | Removes the chest points near you. |
 | `/br setup scanchests [radius]` | Finds every chest, trapped chest and barrel of the map (within the zone radius, or the given radius) and adds them as loot chests. |

@@ -56,6 +56,7 @@ The arena's **deploy mode** decides how players arrive on the map. Change it in 
 
     - **Several launch points**: an arena can have up to 16 (`deploy.max-launch-points` in game.yml, up to 200). Players are **split between them**: each team stays together on one point, and every point gets about the same number of players. Ties are random, so the points change every match.
     - **Scattered launch** (`deploy.scatter`, or **Launch settings → Scattered launch** in the setup GUI): every team drops from its **own random point inside the zone**, spread as far apart as possible, without placing any point by hand. The height is the one of the nearest launch point (or `deploy.skydive-default-height`), never less than 40 blocks above the ground. `deploy.scatter-radius` (default `0.85`) is how far towards the zone edge the points can go. A point picked on the map wall still wins.
+      **Only part of the map?** Set a rectangle with `/br setup skydive area pos1` and `pos2` (the corners where you stand) or `/br setup skydive area <x1> <z1> <x2> <z2>`, e.g. `-100 -100 100 100`: the points are then chosen inside it, in the part that overlaps the zone (`scatter-radius` is not used). `/br setup skydive area clear` goes back to the whole zone. Save the arena afterwards.
     - **No launch point**: everyone drops above the zone centre, at `deploy.skydive-default-height` (always at least 60 blocks above the ground there).
     - No fall damage while gliding and for a moment after landing.
     - Gliding players can't hit anyone.
