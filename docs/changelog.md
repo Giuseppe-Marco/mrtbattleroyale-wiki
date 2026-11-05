@@ -6,7 +6,7 @@ Full version history: [Modrinth versions](https://modrinth.com/plugin/battleroya
 
 - **FancyNpcs support:** `/br npc` now works with FancyNpcs too (same commands and live status). `npc.provider` in config.yml picks the plugin when both are installed.
 - **Scattered launch:** with `deploy.scatter: true` (or Launch settings in the setup GUI) every team drops from its own random point in the zone, spread apart. No launch points to place.
-- **Scattered launch area:** choose where the scattered launch drops players with `/br setup skydive area pos1` / `pos2` (corners where you stand) or `/br setup skydive area <x1> <z1> <x2> <z2>`. Points stay inside the zone whenever the area overlaps it. `area clear` goes back to the whole zone.
+- **Scattered launch areas:** `/br setup skydive exclude <x1> <z1> <x2> <z2>` keeps everyone out of a rectangle (e.g. `-100 -100 100 100`: nobody drops in the centre), `/br setup skydive area <x1> <z1> <x2> <z2>` limits the drops to one. Both also with `pos1` / `pos2` (corners where you stand) and `clear`, and they can be combined.
 - **More launch points:** the limit of 16 per arena is now `deploy.max-launch-points` in game.yml (up to 200).
 
 ---
